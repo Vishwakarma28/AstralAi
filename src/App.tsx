@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useRef, useState } from "react"
 
-const ASSET = ""
-const VIDEO_ASSET = "https://sceneh.ai"
+const ASSET = import.meta.env.BASE_URL.replace(/\/$/, "")
+const VIDEO_ASSET = "https://astral.ai"
 
 type Film = {
   title: string
@@ -121,17 +121,11 @@ function Logo() {
   return (
     <a className="brand" href="#top" aria-label="Astral ai home">
       <img src={`${ASSET}/brand/mark.webp`} alt="" />
-      {/* <img
-        className="brand-word"
-        src={`${ASSET}/brand/wordmark.webp`}
-        alt="Astral ai"
-      /> */}
       <img
         className="brand-word"
-        src={`${ASSET}/brand/astral-ai-logo.png`}
+        src={`${ASSET}/brand/astral-ai-logo-transparent.png`}
         alt="Astral ai"
       />
-      
     </a>
   )
 }
@@ -204,9 +198,14 @@ function App() {
     <div id="top">
       <div className={`intro ${intro ? "" : "intro-out"}`} aria-hidden={!intro}>
         <img src={`${ASSET}/brand/mark-lg.webp`} alt="" />
+        {/* <img
+          className="intro-word"
+          src={`${ASSET}/brand/wordmark.webp`}
+          alt="Astral ai"
+        /> */}
         <img
           className="intro-word"
-          src={`${ASSET}/brand/astral-ai-logo.png`}
+          src={`${ASSET}/brand/astral-ai-logo-transparent.png`}
           alt="Astral ai"
         />
         <span />
@@ -786,7 +785,7 @@ function App() {
             <div>
               <b>Network</b>
               <span>Instagram · Coming soon</span>
-              <a href="https://www.linkedin.com/company/sceneh-ai/">LinkedIn</a>
+              <a href="https://www.linkedin.com/company/astral-ai/">LinkedIn</a>
             </div>
             <div>
               <b>Inquiries</b>
