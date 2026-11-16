@@ -1,0 +1,10 @@
+{
+  "description": "Provides users with a way to request or access the code files for a website.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
